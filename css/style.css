@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;500&display=swap');
+
+
+*{
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+h1{
+    font-size: 1.5rem;
+    color: rgb(77, 77, 77);
+    padding: 0px 10px;
+}
+
+h2,h3{
+    font-size: 1.2rem;
+    color: rgb(77, 77, 77);
+}
+p{
+    font-size: 1rem;
+    color: black;
+}
+
+/*-----Inicio Barra Nav-----*/
+
+.back{
+    background: linear-gradient(90deg, rgba(161, 255, 250, 0.076) 0%, rgba(59,246,239,0.12228641456582634) 100%);}
+
+.botonera {
+    background-color: rgb(230, 230, 230);
+    width: 100%;
+    position: sticky;
+    top: 0;
+    padding: 10px 0px;
+}
+
+.botonera ol{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.botonera ol li a{
+    font-size: 1rem;
+    color: #5B5959;
+}
+
+.botonera ol li a:hover{
+        font-weight: bold;
+}
+/*-----Final Barra Nav-----*/
+
+/*----Inicio estilos Generales----*/
+
+
+
+.imagenes{
+    margin: 5px;
+    border: solid rgb(142, 142, 142) 3px;
+    transition: all .5s;
+}
+
+section{
+    gap: 10px;
+    margin: 10px;
+    text-align: center;
+}
+
+section:hover .imagenes{
+    transform: scale(1.05);
+}
+
+.logo{
+    transition: all .3s;
+}
+
+.botonera ol li:hover .logo{
+    transform: scale(1.5);
+}
+
+footer{
+    width: 100%;
+    border-top: solid rgb(73, 73, 73) 2px;
+    background-color: rgb(230, 230, 230);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 40px 0px;
+} 
+
+.qs-text{
+    width: 400px;
+    height: 150px;
+    border: solid rgb(142, 142, 142) 2px;
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+/*----Final estilos generales-----*/
+
+/*----Inicio grid index-----*/
+
+#contenedor-grid{
+    display: grid;
+    justify-items: center;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+    "barra barra barra"
+    "titulo imagen imagen"
+    "proy inst cert"
+    "pie pie pie"
+    ;
+}
+
+@media (max-width:768px){
+    #contenedor-grid{
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "barra"
+        "titulo"
+        "imagen"
+        "proy" 
+        "inst" 
+        "cert"
+        "pie"
+        ;
+    }
+}
+
+#barra{
+    grid-area: barra;
+}
+
+#titulo{
+    grid-area: titulo;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+}
+
+#imagen{
+    grid-area: imagen;
+}
+
+#proy{
+    grid-area: proy;
+}
+
+#inst{
+    grid-area: inst;
+}
+
+#cert{
+    grid-area: cert;
+}
+
+#pie{
+    grid-area: pie;
+}
+
+/*----Final grid index-----*/
+
+/*----Inicio grid Quienes somos-----*/
+#qs{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 10px;
+    gap: 30px;
+    grid-template-areas:
+    "qs1"
+    "qs2"
+    "qs3"
+    "qs4"
+    "qs5"
+    ;
+}
+
+@media (min-width:1024px){
+    #qs{
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        padding: 10px;
+        gap: 30px;
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+        "qs1 qs1"
+        "qs2 qs3"
+        "qs4 qs4"
+        "qs5 qs5"
+        ;
+    }
+}
+
+#qs1{grid-area: qs1;}
+#qs2{grid-area: qs2;}
+#qs3{grid-area: qs3;}
+#qs4{grid-area: qs4;}
+#qs5{grid-area: qs5;}
+
+
+/*----Final grid Quienes somos-----*/
+
+
